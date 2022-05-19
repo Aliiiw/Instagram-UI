@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/pages/story_appbar_pages.dart';
+import 'package:faker/faker.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -45,8 +47,45 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: const Center(
-        child: Text('Home'),
+      body: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+              StoryBar(
+                storyName: faker.person.name(),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

@@ -35,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: pages[_indextSelected],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
