@@ -15,15 +15,11 @@ class StoryBar extends StatelessWidget {
         children: [
           Column(
             children: [
-              Container(
+              SizedBox(
                 height: 60,
                 width: 60,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage(imageAddress),
-                    fit: BoxFit.fill,
-                  ),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(imageAddress),
                 ),
               ),
               const SizedBox(
