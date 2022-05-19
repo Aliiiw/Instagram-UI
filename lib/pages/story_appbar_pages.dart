@@ -20,7 +20,6 @@ class StoryBar extends StatelessWidget {
                 width: 60,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.grey,
                   image: DecorationImage(
                     image: AssetImage(imageAddress),
                     fit: BoxFit.fill,

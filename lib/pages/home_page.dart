@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/pages/post_page.dart';
 import 'package:instagram_ui/pages/story_appbar_pages.dart';
 import 'package:faker/faker.dart';
 
@@ -47,147 +48,68 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 120,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp1.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp1.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp3.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp1.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp4.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp4.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp3.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp3.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp1.jpeg',
-                    ),
-                    StoryBar(
-                      storyName: faker.person.firstName(),
-                      imageAddress: 'assets/images/sp3.jpeg',
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: const BoxDecoration(
-                        color: Colors.grey,
-                        shape: BoxShape.circle,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 120,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp1.jpeg',
                       ),
-                    ),
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    Text(
-                      faker.person.firstName(),
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp1.jpeg',
                       ),
-                    ),
-                  ],
-                ),
-                const Icon(Icons.more_vert),
-              ],
-            ),
-          ),
-          Container(
-            height: 300,
-            width: double.infinity,
-            color: Colors.grey,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: const [
-                    Icon(Icons.favorite_border_outlined),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8),
-                      child: Icon(Icons.chat_bubble_outline),
-                    ),
-                    Icon(Icons.near_me_outlined),
-                  ],
-                ),
-                const Icon(Icons.bookmark_outline),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: Row(
-              children: const [
-                Text(
-                  'Ali ',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold)
-                ),
-                Text(
-                    'and '
-                ),
-                Text(
-                  '374 ',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold
-                  )),
-                Text('Others Like this post'),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: Text(
-              faker.person.firstName(),
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp3.jpeg',
+                      ),
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp1.jpeg',
+                      ),
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp4.jpeg',
+                      ),
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp4.jpeg',
+                      ),
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp3.jpeg',
+                      ),
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp3.jpeg',
+                      ),
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp1.jpeg',
+                      ),
+                      StoryBar(
+                        storyName: faker.person.firstName(),
+                        imageAddress: 'assets/images/sp3.jpeg',
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
-          )
-        ],
+            PostPage(imageAddress: 'assets/images/sp3.jpeg'),
+            PostPage(imageAddress: 'assets/images/sp4.jpeg',),
+            PostPage(imageAddress: 'assets/images/sp1.jpeg',),
+          ],
+        ),
       ),
     );
   }
