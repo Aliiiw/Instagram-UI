@@ -1,6 +1,7 @@
 # instagram_ui
 
 Sample of instagram social media
+implement main pages in easiest way with simple widgets
 
 ## Getting Started
 
